@@ -15,6 +15,10 @@ import (
 	"github.com/leandrobraga/snippetbox/pkg/models/mysql"
 )
 
+type contextKey string
+
+var contextKeyIsAuthenticated = contextKey("isAuthenticated")
+
 type application struct {
 	errorLog      *log.Logger
 	infolog       *log.Logger
